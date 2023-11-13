@@ -1,0 +1,54 @@
+name: flappy_bird_clone
+description: A clone of the Flappy Bird game built with Flutter.
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/bird.png
+    - assets/images/pipe.png
+    - assets/images/background.png
+
+  module:
+    androidX: true
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.example.flappy_bird_clone
+        pluginClass: FlappyBirdClonePlugin
+      ios:
+        pluginClass: FlappyBirdClonePlugin
+
+  fonts:
+    - family: ArcadeClassic
+      fonts:
+        - asset: assets/fonts/ArcadeClassic.ttf
+
+  assets:
+    - assets/images/
+    - assets/sounds/
+
+  module:
+    androidX: true
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icon/icon.png"
